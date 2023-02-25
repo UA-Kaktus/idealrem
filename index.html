@@ -172,7 +172,7 @@
             <img src="images/main.jpg" alt="Ремонт та обслуговування барабанів">
         </div>
     </div>
-    <a name="about"></a>
+    <a id="about"></a>
     <div class="about_us">
         <div class="container">
             <h1>Балансування барабанів подрібнювачів комбайнів</h1>
@@ -226,7 +226,80 @@
             Звертайтеся, ваша техніка буде як нова.
         </div>
     </div>
-    <a name="contact"></a>
+
+    <section class="responses">
+        <div class="carousel">
+            <div class="carousel__inner">
+                <div class="carousel__item">
+                    <div class="carousel__photoblock">
+                        <div class="carousel__round"></div>
+                        <div class="carousel__rate">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="carousel__content">
+                        <div class="carousel__name">Андрій</div>
+                        <div class="carousel__date">12.05.2021 р.</div>
+                        <div class="carousel__descr">
+                            Дуже вдячний Ідеал-РЕМ, а особливо Володимиру, за професійну роботу та клієнтоорієнтовний
+                            підхід. Кваліфіковано виконали балансування барабанів до комбайну Джон Дір, за помірну ціну
+                            та у
+                            дуже стислий термін. Порекомендую своїм знайомим
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__item">
+                    <div class="carousel__photoblock">
+                        <div class="carousel__round"></div>
+                        <div class="carousel__rate">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="carousel__content">
+                        <div class="carousel__name">Василь Петрович</div>
+                        <div class="carousel__date">21.10.2021 р.</div>
+                        <div class="carousel__descr">
+                            Хочу подякувати колективу Ідеал-РЕМ за професійність: відновили підбарабання, за яке ніхто
+                            не
+                            хотів братися! Хлопці справді знаються на своїй роботі. То ж якщо у вас складне завдання з
+                            ремонту с/х техніки – вам сюди!
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel__item">
+                    <div class="carousel__photoblock">
+                        <div class="carousel__round"></div>
+                        <div class="carousel__rate">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <div class="carousel__content">
+                        <div class="carousel__name">Дмитро</div>
+                        <div class="carousel__date">16.07.2022 р.</div>
+                        <div class="carousel__descr">
+                            Дізнався про компанію Ідеал-РЕМ від знайомих. Звернувся до них для виконання балансування
+                            барабанів подрібнювача соломи до комбайну Полісся. Роботу завершили в обумовлений термін.
+                            Якістю
+                            задоволений. Ціна нижче за конкурентів. Рекомендую
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a id="contact"></a>
     <div class="contact">
         <div class="container">
             <h2>Контакти</h2>
@@ -234,8 +307,7 @@
                 <div class="map_contact">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.296807514791!2d33.84829599999999!3d50.825666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3196b195524bf02!2zNTDCsDQ5JzMyLjQiTiAzM8KwNTAnNTMuOSJF!5e0!3m2!1sru!2sua!4v1672913636862!5m2!1sru!2sua"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="text_contact">
                     <div class="logo_contact">
@@ -303,17 +375,16 @@
             <form action="send_form_a" method="post" class="appointment" enctype="multipart/form-data">
                 <div class="form_input">
                     <div class="form_field">
-                        <input type="text" name="surname" id="surname" сlass="surname" placeholder="Прізвище*" required>
+                        <input type="text" name="surname" id="surname" placeholder="Прізвище*" required>
                     </div>
                     <div class="form_field">
-                        <input type="text" name="name" id="name" сlass="name" placeholder="Ім'я*" required>
+                        <input type="text" name="name" id="name" placeholder="Ім'я*" required>
                     </div>
                     <div class="form_field">
                         <input type="tel" name="tel" class="tel phone" placeholder="+38(012) 345-67-89" required>
                     </div>
                     <div class="form_field">
-                        <textarea type="text" name="comments" class="comments"
-                            placeholder="Коментар тип поломки"></textarea>
+                        <textarea name="comments" class="comments" placeholder="Коментар тип поломки"></textarea>
                     </div>
                     <div class="send_fields">
                         <button type="submit" class="send_btn">Відправити</button>
