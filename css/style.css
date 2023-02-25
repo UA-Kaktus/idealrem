@@ -69,7 +69,7 @@ ul.nav_items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 400px;
+    width: 350px;
 }
 
 .nav_items > li > a {
@@ -77,11 +77,12 @@ ul.nav_items {
     color: #000;
     text-decoration: none;
     font-weight: 600;
+    transition: .3s;
 }
 
 .nav_items > li > a:hover{
     text-decoration: underline;
-    color: #000;
+    color: #084928;
 }
 
 .btn_app,
@@ -93,21 +94,29 @@ ul.nav_items {
     background: #084928;
     color: #fff;
     cursor: pointer;
+    transition: .3s;
+    box-sizing: border-box;
+}
+
+.btn_app:hover, .send_btn:hover {
+    border: 1px solid #084928;
+    color: #084928;
+    background-color: #fff;
 }
 
 .list_social {
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    line-height: normal;
+}
+.list_social a svg path{
+    transition: .5s;
 }
 
-.list_social > li{
-    margin-right: 8px;
-}
-
-.list_social > li > a > img{
-    width: 20px;
+.list_social a:hover svg path {
+    fill: #084928;
 }
 
 .overlay {
@@ -192,6 +201,7 @@ ul.nav_items {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .map_contact {
@@ -214,6 +224,10 @@ ul.nav_items {
 .phone_contact > .list_phone > .item_phone {
     justify-content: center;
 } 
+
+.phone_contact {
+    padding-bottom: 15px;
+}
 
 .btn_contact {
     display: flex;
@@ -308,13 +322,21 @@ ul.nav_items {
 .about_us h2{
     text-align: center;
     font-size: 40px;
+    line-height: 50px;
+}
+
+.nav_mobile:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
     .services__wrapper {
         grid-template-columns: 1fr;
     }
-    
+    .deskotp-header .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
 }
 
 
@@ -334,10 +356,11 @@ ul.nav_items {
        display: none;
    } 
    .mobile_head{
-          display: block;
+    display: block;
     position: fixed;
     width: 100%;
     background: #f1f1f1;
+    z-index: 10;
    }
    
    .logo_nav{
@@ -353,7 +376,7 @@ ul.nav_items {
    
    .list_phone{
        display: flex;
-        flex-direction: column;
+       gap: 20px;
    }
    
    .item_phone > a {
@@ -366,7 +389,7 @@ ul.nav_items {
        max-width: 90%;
    }
    
-     .mobile_menu{
+    .mobile_menu{
         height: auto;
         width: 0;
         position: absolute;
@@ -388,62 +411,88 @@ ul.nav_items {
     justify-content: right;
     padding-right: 20px;
     padding-top: 20px;
-}
+    }
 
-.mobile_list_menu {
+    .mobile_list_menu {
     list-style: none;
     padding: 10px;
-}
+    }
 
-.mobile_list_menu > li{
-    margin-bottom: 10px;
-}
+    .mobile_list_menu > li{
+        margin-bottom: 10px;
+    }
 
-.mobile_list_menu > li > a {
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-}
+    .mobile_list_menu > li > a {
+        color: #000;
+        text-decoration: none;
+        font-size: 20px;
+    }
 
-.images_banner{
-    padding-top: 80px;
-}
+    .images_banner{
+        padding-top: 80px;
+    }
 
-.btn_app_m{
-   display: block;
-    position: fixed;
-    bottom: 0;
-    padding: 10px;
-    width: 100%;
-    color: #fff;
-    border: none;
-    background: #084928;
-    font-size: 20px;
-    z-index: 2;
-}
-
-.modal{
-        max-width: calc(100% - 20%);
-}
-
-.map_text {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.map_contact {
+    .btn_app_m{
     display: block;
-    width: 100%;
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
+        width: 100%;
+        color: #fff;
+        border: none;
+        background: #084928;
+        font-size: 20px;
+        z-index: 2;
+    }
+
+    .modal{
+            max-width: calc(100% - 20%);
+    }
+
+    .map_text {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .map_contact {
+        display: block;
+        width: 100%;
+    }
+
+    .text_contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .adres_contact{
+        text-align: center;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
 }
 
-.text_contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-}
-
-.adres_contact{
-    text-align: center;
-}
+@media (max-width: 576px) {
+    .container {
+        max-width: 90%;
+    }
+    .list_phone {
+        flex-direction: column;
+        gap: unset;
+    }
+    .logo_block > img {
+        width: 70px;
+    }
+    .about_us h2 {
+        font-size: 24px;
+    }
+    .services {
+        padding: 40px 0;
+    }
+    .services__item-title {
+        font-size: 24px;
+    }
 }
