@@ -92,18 +92,14 @@ ul.nav_items {
 }
 
 .list_social {
-    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.list_social > li{
-    margin-right: 8px;
-}
-
-.list_social > li > a > img{
-    width: 20px;
+.list_social a:hover svg path {
+    fill: #084928;
 }
 
 .overlay {
@@ -210,6 +206,10 @@ ul.nav_items {
 .phone_contact > .list_phone > .item_phone {
     justify-content: center;
 } 
+
+.phone_contact {
+    padding-bottom: 15px;
+}
 
 .btn_contact {
     display: flex;
