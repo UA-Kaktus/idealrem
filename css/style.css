@@ -109,15 +109,17 @@ body {
 }
 
 .images_banner {
-    background: url('./../images/main_bg.webp') center / cover no-repeat;
+    /* background: url('./../images/main_bg.webp') center / cover no-repeat; */
     height: 650px;
     padding-top: 100px;
     position: relative;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .7)), url('./../images/main_bg.webp') center / cover no-repeat;
 }
 .images_banner h1 {
-    background-color:rgba(8, 73, 40, .85);
+    /* background-color:rgba(8, 73, 40, .85);
     padding: 15px;
-    border-radius: 45px;
+    border-radius: 45px; */
+    text-shadow: 4px 5px 6px black;
     color: #fff;
     display: block;
     font-size: 62px;
