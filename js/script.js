@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     }
 
-
 }); // end ready
 
  $(document).ready(function(){
