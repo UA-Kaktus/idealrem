@@ -60,7 +60,7 @@
                 <div class="nav_list">
                     <ul class="nav_items">
                         <li><a href="#about">Про нас</a></li>
-                        <li><a href="#">Послуги</a></li>
+                        <li><a href="#service">Послуги</a></li>
                         <li><a href="#contact">Контакти</a></li>
                     </ul>
                 </div>
@@ -95,6 +95,15 @@
             </div>
         </div>
     </header>
+    <div class="mobile-menu">
+        <ul class="mobile-menu_items">
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#service">Послуги</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+        <div class="divider"></div>
+        <div class="mobile-menu_adress">смт Недригайлів, вул. Незалежності 87</div>
+    </div>
     <header class="main_head mobile_head">
         <div class="container">
             <div class="logo_nav">
@@ -111,74 +120,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="nav_mobile">
-                    <div class="menu-icon">
-                        <a id="m_menu" onclick="open_mobile_menu()">
-                            <svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false"
-                                viewBox="0 0 33 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" width="32" height="2" rx="1" fill="#333333"></rect>
-                                <rect x="0.5" y="8" width="32" height="2" rx="1" fill="#333333"></rect>
-                                <rect x="0.5" y="16" width="32" height="2" rx="1" fill="#333333"></rect>
-                            </svg>
-                        </a>
-                    </div>
-                    <div id="mobile_nav" class="mobile_menu">
-                        <div class="head_menu_m">
-                            <div class="head_left">
-                                <span onclick="close_mobile()">
-                                    <svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img"
-                                        focusable="false" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M2.50716 1.09288C2.11663 0.702357 1.48347 0.702357 1.09294 1.09288C0.702418 1.48341 0.702418 2.11657 1.09294 2.50709L2.50716 1.09288ZM15.4929 16.9071C15.8835 17.2976 16.5166 17.2976 16.9072 16.9071C17.2977 16.5166 17.2977 15.8834 16.9072 15.4929L15.4929 16.9071ZM1.09294 15.4929C0.702418 15.8834 0.702418 16.5166 1.09294 16.9071C1.48347 17.2976 2.11663 17.2976 2.50716 16.9071L1.09294 15.4929ZM16.9072 2.50709C17.2977 2.11657 17.2977 1.48341 16.9072 1.09288C16.5166 0.702357 15.8835 0.702357 15.4929 1.09288L16.9072 2.50709ZM1.09294 2.50709L15.4929 16.9071L16.9072 15.4929L2.50716 1.09288L1.09294 2.50709ZM2.50716 16.9071L16.9072 2.50709L15.4929 1.09288L1.09294 15.4929L2.50716 16.9071Z"
-                                            fill="#333333"></path>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="menu-ua_mobile-container">
-                            <ul class="mobile_list_menu">
-                                <li><a href="#about">Про нас</a></li>
-                                <li><a href="#">Послуги</a></li>
-                                <li><a href="#contact">Контакти</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-        <!-- <script>
-            function open_mobile_menu() {
-                document.getElementById("mobile_nav").style.display = "none";
-                document.getElementById("mobile_nav").style.display = "block";
-                document.getElementById("mobile_nav").style.width = "100%";
-
-            }
-
-            window.addEventListener('click', function (e) {
-                console.log(document.getElementById("mobile_nav").contains(e.target));
-                if (!document.getElementById("mobile_nav").contains(e.target) && !document.getElementById('m_menu').contains(e.target)) {
-                    document.getElementById("mobile_nav").style.width = "0px";
-                    document.getElementById("mobile_nav").style.display = "none";
-                    document.getElementById("mobile_nav").style.display = "none";
-                } else { }
-            });
-
-            function close_mobile() {
-                document.getElementById("mobile_nav").style.display = "none";
-            }
-        </script> -->
     </header>
     <div class="main_banner">
         <div class="images_banner">
             <img src="images/main.jpg" alt="Ремонт та обслуговування барабанів">
         </div>
     </div>
-    <a name="about"></a>
+    <a name="service"></a>
     <section class="services">
         <div class="container">
             <div class="services__wrapper">
-                <div class="services__item">
+                <div class="services__item _animated-item-1">
                     <h2 class="services__item-title">
                         Ремонт підбарабання (ДЕК)
                     </h2>
@@ -192,7 +151,7 @@
                     </ul>
                     <p>Після виконання всіх ремонтних робіт проводиться проточування підбарабання на спеціальних токарних станках. Підбарабання після ремонту відповідає всім технічним вимогам.</p>
                 </div>
-                <div class="services__item">
+                <div class="services__item _animated-item-2">
                     <h2 class="services__item-title">
                         Балансування барабанів подрібнювачів соломи зернозбиральних комбайнів
                     </h2>
@@ -212,17 +171,20 @@
             </div>
         </div>
     </section>
+    <a name="about"></a>
     <div class="about_us">
         <div class="container">
-            <h2>Чому потрібне балансування барабанів</h2>
-            <p>Нові комбайни сходять із заводського конвеєра зі збалансованими барабанами подрібнювача соломи. Під час
-                експлуатації, ножі (молоти) вала зношуються неравномірно та потребують часткової або повної заміни. Нові
-                та старі ножі мають різну вагу, тому при роботі виникає вібрація вала. Вона призводить до появи тріщин
-                на корпусі агрегата та його виходу з ладу. Чим вища маса молотів, тим сильніша вібрація та вірогідніша
-                поломка. З метою запобігання аварії, періодично потрібно проводити балансування барабанів подрібнювачів
-                з встановленими ножами: при заміні молотів або при довготривалій роботі техніки</p>
+            <div class="_animated-item-1">
+                <h2>Чому потрібне балансування барабанів</h2>
+                <p>Нові комбайни сходять із заводського конвеєра зі збалансованими барабанами подрібнювача соломи. Під час
+                    експлуатації, ножі (молоти) вала зношуються неравномірно та потребують часткової або повної заміни. Нові
+                    та старі ножі мають різну вагу, тому при роботі виникає вібрація вала. Вона призводить до появи тріщин
+                    на корпусі агрегата та його виходу з ладу. Чим вища маса молотів, тим сильніша вібрація та вірогідніша
+                    поломка. З метою запобігання аварії, періодично потрібно проводити балансування барабанів подрібнювачів
+                    з встановленими ножами: при заміні молотів або при довготривалій роботі техніки</p>
+            </div>
             <div class="row">
-                <div class="row__text">
+                <div class="row__text _animated-item-1">
                     <p>Грамотне балансування барабанів подрібнювачів</p>
                     <ul>
                         <li>захищає від вібрації і появи тріщин на корпусі апарата;</li>
@@ -231,25 +193,27 @@
                         <li>гарантує безпечну роботу механізмів.</li>
                     </ul>
                 </div>
-                <img class="row__img" src="./images/a2.jpeg" alt="vehicle">
+                <img class="row__img _animated-item-2" src="./images/a2.jpeg" alt="vehicle">
             </div>
-            <h2>5 причин довірити ремонт комбайнів Ideal РЕМ</h2>
-            <p><strong>Ideal РЕМ</strong> має 32 роки досвіду в ремонті сільськогосподарської техніки, простору
-                майстерню, необхідні виробничі потужності та сучасне обладнання (стенди для балансування та відновлення
-                конфігурації, токарні станки тощо)</p>
-            Звертаючись до <strong>Ideal РЕМ</strong>, ви отримуєте:
-            <ul>
-                <li>ремонт та обслуговування комбайнів всіх моделей (балансування барабанів, відновлення підбарабання
-                    всіх марок с/х машин, будь-якої складності);</li>
-                <li>гарантії якості робіт, дотримання техпроцесів та стандартів;</li>
-                <li>додержання термінів;</li>
-                <li>помірні ціни;</li>
-                <li>виконання замовлень в зручний для вас час.</li>
-            </ul>
+            <div class="_animated-item-1">
+                <h2>5 причин довірити ремонт комбайнів Ideal РЕМ</h2>
+                <p><strong>Ideal РЕМ</strong> має 32 роки досвіду в ремонті сільськогосподарської техніки, простору
+                    майстерню, необхідні виробничі потужності та сучасне обладнання (стенди для балансування та відновлення
+                    конфігурації, токарні станки тощо)</p>
+                Звертаючись до <strong>Ideal РЕМ</strong>, ви отримуєте:
+                <ul>
+                    <li>ремонт та обслуговування комбайнів всіх моделей (балансування барабанів, відновлення підбарабання
+                        всіх марок с/х машин, будь-якої складності);</li>
+                    <li>гарантії якості робіт, дотримання техпроцесів та стандартів;</li>
+                    <li>додержання термінів;</li>
+                    <li>помірні ціни;</li>
+                    <li>виконання замовлень в зручний для вас час.</li>
+                </ul>
+            </div>
             <H2>Як замовити обслуговування техніки</H2>
-            <div class="row">
-                <img class="row__img" src="./images/ve2.jpg" alt="vehicle 2">
-                <div class="row__text">
+            <div class="row ">
+                <img class="row__img _animated-item-1" src="./images/ve2.jpg" alt="vehicle 2">
+                <div class="row__text _animated-item-2">
                     Щоб замовити балансування барабанів подрібнювачів, треба зробити 3 простих кроки:
                     <ul>
                         <li>зателефонувати за номером <a href="tel:+380663178974">+38 (066)-317-89-74</a> <a

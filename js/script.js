@@ -1,6 +1,5 @@
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
 
-
 document.addEventListener('DOMContentLoaded', function() {
    var modalButtons = document.querySelectorAll('.js-open-modal'),
        overlay      = document.querySelector('.js-overlay-modal'),
@@ -47,7 +46,55 @@ document.addEventListener('DOMContentLoaded', function() {
         this.classList.remove('active');
     });
 
+    //Мобільне меню
+    const mobMenu = document.querySelector('.mobile-menu');
+    const burger = document.querySelector('.burger');
+    const mobLinks = document.querySelectorAll('.mobile-menu_items li');
+    let mobMenuActive = false;
+    
+    burger.addEventListener('click', (e) => {
+        if (mobMenuActive) {
+            burger.classList.remove('burger-active');
+            mobMenu.style.left = "-100%";
+            mobMenuActive = false;
+            document.body.style.overflow = '';
+        } else {
+            burger.classList.add('burger-active');
+            mobMenu.style.left = 0;
+            mobMenuActive = true;
+            document.body.style.overflow = 'hidden';
+        }
+    });
 
+    mobLinks.forEach(el => el.addEventListener('click', ()=> {
+        if (mobMenuActive) {
+            burger.classList.remove('burger-active');
+            mobMenu.style.left = "-100%";
+            mobMenuActive = false;
+            document.body.style.overflow = '';
+        }
+    }));
+
+    //Анімації для головної
+    const animatedItems = document.querySelectorAll('._animated-item-1, ._animated-item-2, ._animated-item-3');
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                if (change.target.classList.contains('_animated-item-1')) {
+                    change.target.classList.add('animate-fade-out');
+                } else if (change.target.classList.contains('_animated-item-2')) {
+                    setTimeout(()=> {
+                        change.target.classList.add('animate-fade-out');
+                    }, 300);
+                }
+            }
+        });
+    }
+    let options = { threshold: [0.3] };
+    let observer = new IntersectionObserver(onEntry, options);
+    for (let el of animatedItems) {
+        observer.observe(el);
+    }
 
 
 }); // end ready
